@@ -24,9 +24,9 @@ $color-red-dark: #f58182;
 html {
   font-size: 62.5%;
 
-  @include for-large-down {
-    font-size: 50%;
-  }
+  // @include for-large-down {
+  //   font-size: 50%;
+  // }
 }
 
 body {
@@ -49,6 +49,10 @@ body {
   margin: 0 auto;
   display: grid;
   grid-template-rows: auto auto 1fr auto;
+
+  @include for-medium-down {
+    width: 90%;
+  }
 }
 
 .gradient {
@@ -71,6 +75,10 @@ body {
 }
 
 ///blueprintjs styles
+#textInput-newList {
+  font-size: 1.6rem;
+}
+
 .bp5-form-content {
   min-height: 45px;
 }

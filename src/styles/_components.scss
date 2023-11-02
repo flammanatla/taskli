@@ -110,8 +110,9 @@
     border-radius: 6px 0 0 6px;
     padding: 0.5rem 2.5rem;
     background-color: $color-bkgrd-white;
+
     @include for-medium-down {
-      font-size: 16px;
+      font-size: 1.6rem;
     }
   }
 }
@@ -188,7 +189,7 @@
   border: none;
 
   @include for-medium-down {
-    font-size: 1.75rem;
+    font-size: 1.6rem;
   }
 
   &__actions {
@@ -217,7 +218,7 @@
     font-size: 2.5rem;
 
     @include for-medium-down {
-      font-size: 1.75rem;
+      font-size: 1.6rem;
     }
   }
 }

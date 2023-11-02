@@ -78,13 +78,13 @@ export default function Sidebar({
                 `The name ${listName} is already in use. Please enter a different name for your list`
               }
               label="Enter the name of the new list"
-              labelFor="text-input"
+              labelFor="textInput-newList"
               labelInfo="(required)"
               intent={Intent.DANGER}
             >
               <InputGroup
                 autoFocus
-                id="text-input"
+                id="textInput-newList"
                 placeholder="i.e. shopping, to-do etc."
                 small={true}
                 value={listName}
