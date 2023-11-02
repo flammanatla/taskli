@@ -43,7 +43,7 @@ export default function App() {
   const itemsFromSelectedList =
     lists?.find((list) => list.name === selectedList)?.items || [];
 
-  const isMobile = useMediaQuery("(max-width: 425px)");
+  const isMobile = useMediaQuery("(max-width: 570px)");
 
   useEffect(() => {
     updateLocalStorage(lists);

@@ -39,7 +39,7 @@ body {
   grid-template-columns: 0.6fr 2.4fr;
   height: 100dvh;
 
-  @include for-medium-down {
+  @include for-mobile-down {
     grid-template-columns: 1fr;
   }
 }
