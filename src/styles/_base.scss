@@ -1,0 +1,147 @@
+@import url("https://fonts.googleapis.com/css2?family=Monoton&family=Quicksand:wght@500;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap");
+
+@import "normalize.css";
+@import "@blueprintjs/core/lib/css/blueprint.css";
+@import "@blueprintjs/icons/lib/css/blueprint-icons.css";
+
+$color-bkgrd-white: rgba(255, 255, 255, 0.8);
+
+$color-blue-light: #abeffe;
+$color-blue-dark: #86e9ff;
+
+$color-grey-light: #eaebf0;
+$color-red-light: #f9c5c6;
+$color-red-dark: #f58182;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-style: normal;
+}
+
+html {
+  font-size: 62.5%;
+
+  @include for-large-down {
+    font-size: 50%;
+  }
+}
+
+body {
+  font-family: "Quicksand";
+  font-weight: 500;
+}
+
+.app {
+  display: grid;
+  grid-template-columns: 0.6fr 2.4fr;
+  height: 100dvh;
+
+  @include for-medium-down {
+    grid-template-columns: 1fr;
+  }
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-rows: auto auto 1fr auto;
+}
+
+.gradient {
+  background: radial-gradient(
+      65.8% 45.36% at 65.87% 100%,
+      #00d1ff 29.17%,
+      rgba(0, 185, 255, 0) 79.17%
+    ),
+    radial-gradient(
+      69.05% 53.45% at 82.71% 63.96%,
+      #ed2bf0 0%,
+      rgba(253, 126, 255, 0) 66.67%
+    ),
+    radial-gradient(
+      128.65% 96.87% at 90.9% 13.43%,
+      #ef7726 0%,
+      rgba(255, 103, 0, 0) 74.48%
+    ),
+    #fff;
+}
+
+///blueprintjs styles
+.bp5-form-content {
+  min-height: 45px;
+}
+
+.bp5-dialog {
+  margin: 30px 20px;
+}
+
+.bp5-popover {
+  // &-target {
+  //   .bp5-button {
+  //     background-color: transparent;
+  //   }
+  // }
+  &--title {
+    padding-bottom: 1rem;
+  }
+  &--footer {
+    display: flex;
+    flex-direction: row-reverse;
+    margin-top: 10px;
+  }
+}
+
+.bp5-alert {
+  &-body {
+    svg {
+      margin-right: 20px;
+      margin-top: 5px;
+      font-size: 5rem;
+      color: $color-red-dark;
+    }
+  }
+  &-footer {
+    .bp5-button {
+      background-color: $color-grey-light !important;
+    }
+  }
+}
+
+.bp5-button {
+  font-family: "Quicksand";
+
+  border-radius: 6px;
+  // background-color: $color-grey-light;
+  box-shadow: none !important;
+
+  &--dismiss {
+    background-color: $color-grey-light !important;
+  }
+
+  &.bp5-intent-danger {
+    background-color: $color-red-dark !important;
+    color: black;
+  }
+  &.bp5-intent-danger:hover {
+    background-color: $color-red-dark !important;
+    color: black;
+  }
+
+  &.bp5-intent-primary {
+    background-color: $color-blue-dark !important;
+    color: black;
+  }
+
+  &.bp5-intent-primary:hover {
+    background-color: $color-blue-dark !important;
+    color: black;
+  }
+
+  &--sidebar {
+    background-color: transparent !important;
+  }
+}
