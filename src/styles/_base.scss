@@ -45,10 +45,11 @@ body {
 }
 
 .container {
+  height: 100dvh;
   width: 80%;
   margin: 0 auto;
   display: grid;
-  grid-template-rows: auto auto 1fr auto;
+  grid-template-rows: min-content min-content 1fr min-content;
 
   @include for-medium-down {
     width: 90%;
@@ -99,7 +100,8 @@ body {
   &--footer {
     display: flex;
     flex-direction: row-reverse;
-    margin-top: 10px;
+    margin-top: 1rem;
+    gap: 1rem;
   }
 }
 

@@ -119,10 +119,6 @@
 
 .items {
   width: 100%;
-  // min-width: 520px;
-  // max-width: 1000px;
-
-  height: 60dvh;
   color: #000;
   display: flex;
   justify-content: space-between;
@@ -134,9 +130,6 @@
   overflow: scroll;
 
   &__list {
-    /* width: 80%; */
-    // overflow: scroll;
-    /* grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); to fit as many items as possible*/
     list-style: none;
     padding: 0 5px;
 
