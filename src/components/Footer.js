@@ -55,8 +55,8 @@ export default function Footer({
           }}
         >
           <p>
-            Are you sure you want to clear all items {selectedList}? You won't
-            be able to restore them later.
+            Are you sure you want to clear all items from list "{selectedList}"?
+            You won't be able to restore them later.
           </p>
         </Alert>
         <button
