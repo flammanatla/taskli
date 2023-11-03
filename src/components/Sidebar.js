@@ -164,6 +164,7 @@ export default function Sidebar({
                       <Button
                         intent={Intent.DANGER}
                         text="delete"
+                        className={Classes.POPOVER_DISMISS}
                         onClick={(event) => {
                           event.stopPropagation();
                           onDeleteList(name);

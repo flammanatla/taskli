@@ -24,7 +24,11 @@ export default function Container({
       <Header isMobile={isMobile} onSetMobileView={onSetMobileView}>
         {selectedList} list
       </Header>
-      <Form onAddItems={onAddItems} selectedList={selectedList} />
+      <Form
+        isMobile={isMobile}
+        onAddItems={onAddItems}
+        selectedList={selectedList}
+      />
       <PackingList
         items={items}
         sortBy={sortBy}

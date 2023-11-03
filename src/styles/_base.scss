@@ -89,19 +89,27 @@ body {
 }
 
 .bp5-popover {
-  // &-target {
-  //   .bp5-button {
-  //     background-color: transparent;
-  //   }
-  // }
   &--title {
     padding-bottom: 1rem;
   }
+
+  &.bp5-popover-content-sizing {
+    .bp5-popover-content {
+      @include for-mobile-down {
+        max-width: 185px;
+      }
+    }
+  }
+
   &--footer {
     display: flex;
-    flex-direction: row-reverse;
+    justify-content: flex-end;
     margin-top: 1rem;
     gap: 1rem;
+
+    @include for-mobile-down {
+      justify-content: space-between;
+    }
   }
 }
 

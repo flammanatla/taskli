@@ -87,6 +87,12 @@
   @include for-medium-down {
     font-size: 5rem;
   }
+
+  @include for-mobile-down {
+    font-size: 2.5rem;
+    display: flex;
+    justify-content: space-between;
+  }
 }
 
 ////
@@ -98,8 +104,12 @@
   align-items: center;
   justify-content: center;
 
-  margin: 2rem auto 0;
   cursor: pointer;
+  margin: 2rem auto 0;
+
+  @include for-mobile-down {
+    margin: 1rem auto 0;
+  }
 
   & input {
     width: 100%;

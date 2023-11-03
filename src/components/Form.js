@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-export default function Form({ selectedList, onAddItems }) {
+export default function Form({ isMobile, selectedList, onAddItems }) {
   const [description, setDescription] = useState("");
 
   function handleSubmit(event) {
@@ -25,7 +25,9 @@ export default function Form({ selectedList, onAddItems }) {
       <form className="add-form" onClick={handleSubmit}>
         <input
           type="text"
-          placeholder="What do you need to do?..."
+          placeholder={
+            isMobile ? "Start typing..." : "What do you need to do?..."
+          }
           value={description}
           onChange={(e) => setDescription(e.target.value)}
         />
