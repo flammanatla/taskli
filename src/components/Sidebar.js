@@ -113,6 +113,7 @@ export default function Sidebar({
                 />
                 <Button
                   text="add"
+                  disabled={showError}
                   onClick={handleInputChange}
                   intent={Intent.PRIMARY}
                 />
@@ -132,60 +133,64 @@ export default function Sidebar({
               onSetMobileView(false, true);
             }}
           >
-            <FontAwesomeIcon
-              icon={faTag}
-              size="xl"
-              className="faIcon faIcon--tag"
-            />
+            <div className="sidebarItem sidebarItem__name">
+              <FontAwesomeIcon
+                icon={faTag}
+                size="xl"
+                className="faIcon faIcon--tag"
+              />
 
-            <label>{name}</label>
-            <div
-              onClick={(e) => {
-                e.stopPropagation();
-              }}
-            >
-              <Popover
-                popoverClassName={`${Classes.POPOVER_CONTENT_SIZING}`}
-                enforceFocus={false}
-                placement="right"
-                content={
-                  <div key="text">
-                    <h4 className="bp5-popover--title">Confirm deletion</h4>
-                    <p>
-                      Are you sure you want to delete these items? You won't be
-                      able to recover them.
-                    </p>
-                    <div className="bp5-popover--footer">
-                      <Button
-                        className={`${Classes.POPOVER_DISMISS} bp5-button--dismiss`}
-                      >
-                        cancel
-                      </Button>
-                      <Button
-                        intent={Intent.DANGER}
-                        text="delete"
-                        className={Classes.POPOVER_DISMISS}
-                        onClick={(event) => {
-                          event.stopPropagation();
-                          onDeleteList(name);
-                        }}
-                      />
-                    </div>
-                  </div>
-                }
+              <label>{name}</label>
+            </div>
+            <div className=" sidebarItem sidebarItem__actions">
+              <div
+                onClick={(e) => {
+                  e.stopPropagation();
+                }}
               >
+                <Popover
+                  popoverClassName={`${Classes.POPOVER_CONTENT_SIZING}`}
+                  enforceFocus={false}
+                  placement="right"
+                  content={
+                    <div key="text">
+                      <h4 className="bp5-popover--title">Confirm deletion</h4>
+                      <p>
+                        Are you sure you want to delete these items? You won't
+                        be able to recover them.
+                      </p>
+                      <div className="bp5-popover--footer">
+                        <Button
+                          className={`${Classes.POPOVER_DISMISS} bp5-button--dismiss`}
+                        >
+                          cancel
+                        </Button>
+                        <Button
+                          intent={Intent.DANGER}
+                          text="delete"
+                          className={Classes.POPOVER_DISMISS}
+                          onClick={(event) => {
+                            event.stopPropagation();
+                            onDeleteList(name);
+                          }}
+                        />
+                      </div>
+                    </div>
+                  }
+                >
+                  <Button
+                    className="bp5-button--sidebar"
+                    icon={<FontAwesomeIcon icon={faTrash} size="lg" />}
+                  ></Button>
+                </Popover>
+              </div>
+              {isMobile && (
                 <Button
                   className="bp5-button--sidebar"
-                  icon={<FontAwesomeIcon icon={faTrash} size="lg" />}
+                  icon={<FontAwesomeIcon icon={faChevronRight} size="lg" />}
                 ></Button>
-              </Popover>
+              )}
             </div>
-            {isMobile && (
-              <Button
-                className="bp5-button--sidebar"
-                icon={<FontAwesomeIcon icon={faChevronRight} size="lg" />}
-              ></Button>
-            )}
           </div>
         ))}
       </ul>

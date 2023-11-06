@@ -38,25 +38,13 @@
 
     text-align: left;
     font-size: 1.5rem;
-    padding: 0.5rem 1rem;
+    padding: 0.5rem 0rem;
     background-color: transparent;
 
     &__list {
       display: flex;
+      justify-content: space-between;
       align-items: center;
-
-      label {
-        flex: 3 1 auto;
-      }
-
-      &--selected {
-        background-color: $color-grey-light;
-        flex-basis: auto;
-      }
-
-      &:hover {
-        background-color: $color-grey-light;
-      }
     }
 
     &__create {
@@ -66,6 +54,47 @@
       margin-bottom: 2.5rem;
       font-size: 1.75rem;
     }
+  }
+}
+
+.sidebarItem {
+  &__name {
+    display: flex;
+    font-size: 1.5rem;
+    svg {
+      font-size: 1.5rem;
+    }
+    label {
+      // flex: 3 1 auto;
+      // font-size: 1.5rem;
+
+      @include for-large-down {
+        text-overflow: ellipsis;
+        max-width: 10rem;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+
+      @include for-mobile-down {
+        text-overflow: ellipsis;
+        max-width: 18rem;
+        white-space: nowrap;
+        overflow: hidden;
+      }
+    }
+  }
+
+  &--selected {
+    background-color: $color-grey-light;
+    flex-basis: auto;
+  }
+
+  &:hover {
+    background-color: $color-grey-light;
+  }
+
+  &__actions {
+    display: flex;
   }
 }
 
@@ -83,6 +112,10 @@
   font-weight: 400;
   padding: 1rem 0 0;
   font-size: 6.25rem;
+
+  @include for-large-down {
+    font-size: 5.5rem;
+  }
 
   @include for-medium-down {
     font-size: 5rem;

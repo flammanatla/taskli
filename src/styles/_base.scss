@@ -10,7 +10,7 @@ $color-bkgrd-white: rgba(255, 255, 255, 0.8);
 $color-blue-light: #abeffe;
 $color-blue-dark: #86e9ff;
 
-$color-grey-light: #eaebf0;
+$color-grey-light: #f0ebea;
 $color-red-light: #f9c5c6;
 $color-red-dark: #f58182;
 
@@ -157,6 +157,11 @@ body {
   &.bp5-intent-primary:hover {
     background-color: $color-blue-dark !important;
     color: black;
+  }
+
+  &.bp5-intent-primary:disabled {
+    background-color: rgba(45, 114, 210, 0.5) !important;
+    color: white;
   }
 
   &--sidebar {

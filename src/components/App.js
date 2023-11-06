@@ -7,7 +7,7 @@ import {
   loadListsHistory,
   updateSelectedListInLocalStorage,
   updateLocalStorage,
-} from "./localStorage";
+} from "../utils/localStorage";
 
 // const lists = [
 //   {
@@ -55,7 +55,7 @@ export default function App() {
 
   function handleCreateList(listName) {
     console.log(listName);
-    if (!listName) return;
+    if (!listName.trim()) return;
 
     setLists((lists) => [...lists, { items: [], name: listName }]);
     setSelectedList(listName);
